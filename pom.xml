@@ -19,11 +19,6 @@
 
     <dependencies>
         <!-- Selenium -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.27.0</version>
-        </dependency>
 
         <!-- WebDriver Manager -->
         <dependency>
@@ -32,6 +27,18 @@
             <version>5.6.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.11.0</version> <!-- Use latest version -->
+        </dependency>
+
+        <!-- WebDriverManager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.6.3</version>
+        </dependency>
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>

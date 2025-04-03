@@ -1,8 +1,10 @@
 package utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
@@ -35,7 +37,11 @@ public class PageRefactory {
                 chromeOptions.addArguments(
                         "--disable-notifications",
                         "--disable-popup-blocking",
-                        "--no-sandbox"
+                        "--no-sandbox",
+                        "--disable-dev-shm-usage",
+                        "--remote-allow-origins=*",
+                        "--disable-gpu",
+                        "--window-size=1920,1080"
                 );
                 driver = new RemoteWebDriver(gridUrl, chromeOptions);
                 break;

@@ -142,12 +142,14 @@ public class SignupFormPage {
         return this;
     }
     private void selectDropdownByValue(By locator, String value) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        WebDriverWait extendedWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element = extendedWait.until(ExpectedConditions.presenceOfElementLocated(locator));
         new Select(element).selectByValue(value);
     }
 
     private void selectDropdownByText(By locator, String text) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        WebDriverWait extendedWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element = extendedWait.until(ExpectedConditions.presenceOfElementLocated(locator));
         new Select(element).selectByVisibleText(text);
     }
 

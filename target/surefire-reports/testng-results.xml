@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-03T03:11:51 EET" name="Surefire suite" finished-at="2025-04-03T03:12:26 EET" duration-ms="35429">
+  <suite started-at="2025-04-03T19:37:07 EET" name="Surefire suite" finished-at="2025-04-03T19:37:40 EET" duration-ms="33668">
     <groups>
     </groups>
-    <test started-at="2025-04-03T03:11:51 EET" name="Surefire test" finished-at="2025-04-03T03:12:26 EET" duration-ms="35429">
+    <test started-at="2025-04-03T19:37:07 EET" name="Surefire test" finished-at="2025-04-03T19:37:40 EET" duration-ms="33668">
       <class name="automationExercise.tests.Automation">
-        <test-method is-config="true" signature="Properties()[pri:0, instance:automationExercise.tests.Automation@7f02251]" started-at="2025-04-03T03:11:51 EET" name="Properties" finished-at="2025-04-03T03:11:51 EET" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="Properties()[pri:0, instance:automationExercise.tests.Automation@ecfbe91]" started-at="2025-04-03T19:37:07 EET" name="Properties" finished-at="2025-04-03T19:37:07 EET" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Properties -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:automationExercise.tests.Automation@7f02251]" started-at="2025-04-03T03:11:51 EET" name="setup" finished-at="2025-04-03T03:11:55 EET" duration-ms="3626" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:automationExercise.tests.Automation@ecfbe91]" started-at="2025-04-03T19:37:07 EET" name="setup" finished-at="2025-04-03T19:37:10 EET" duration-ms="2980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="completeUserJourney()[pri:0, instance:automationExercise.tests.Automation@7f02251]" started-at="2025-04-03T03:11:55 EET" name="completeUserJourney" finished-at="2025-04-03T03:12:26 EET" duration-ms="31369" status="PASS">
+        <test-method signature="completeUserJourney()[pri:0, instance:automationExercise.tests.Automation@ecfbe91]" started-at="2025-04-03T19:37:10 EET" name="completeUserJourney" finished-at="2025-04-03T19:37:40 EET" duration-ms="29915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeUserJourney -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:automationExercise.tests.Automation@7f02251]" started-at="2025-04-03T03:12:26 EET" name="teardown" finished-at="2025-04-03T03:12:26 EET" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:automationExercise.tests.Automation@ecfbe91]" started-at="2025-04-03T19:37:40 EET" name="teardown" finished-at="2025-04-03T19:37:40 EET" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
