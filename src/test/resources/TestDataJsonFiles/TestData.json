@@ -1,0 +1,40 @@
+{
+         "username": "MahamedNabil",
+         "mail": "mohamEdNbL.101@gmail.com",
+  "AccountInformation":
+  {
+     "UserGender": "Male",
+     "Password": "123456",
+     "Day": "1",
+     "Month": "July",
+     "Year": "1999",
+     "FirstName": "mohamed",
+     "Newsletter": "true",
+     "SpecialOffer": "false",
+     "LastName": "nabil",
+     "Company": "valeo",
+     "Address1": "Smouha",
+     "Address2": "Alexandria",
+     "Country": "Canada",
+     "State": "229",
+     "City": "Alexandria",
+     "ZipCode": "123123",
+     "MobileNumber": "01068035384"
+  },
+  "LoginCredintioals":
+  {
+    "email": "mohmdnbl.777@gmail.com",
+    "password": "123456"
+  },
+  "PaymentDetails": {
+    "NameOnCard": "Test User",
+    "CardNumber": "4111111111111111",
+    "CVC": "123",
+    "ExpiryMonth": "12",
+    "ExpiryYear": "2030"
+  },
+  "LoginCredentials": {
+    "email": "test@example.com",
+    "password": "Test1234"
+  }
+}
