@@ -20,9 +20,6 @@ End-to-End testing solution using:
 
    # Start services and build test-runner
    docker-compose up -d --build
-
-   # Execute tests (Maven)
-   docker-compose exec test-runner mvn test -Dtest=${TEST_PATTERN}
-
-   # View Allure report (after tests complete)
-   allure serve allure-reports
+   
+   # Running E2E testCase
+   mvn clean test -Dtest=Automation
