@@ -9,10 +9,9 @@ public class AccountSuccessMessagePage {
 
 
 
-///// Locators \\\\\
+   // Locators
 
     private By getAccountCreated = By.xpath("//h2[@data-qa='account-created']");
-    private String url = "https://automationexercise.com/account_created";
     private By clickOnCreateButton = By.cssSelector("a[data-qa=continue-button]");
 
 
@@ -25,7 +24,6 @@ public class AccountSuccessMessagePage {
     }
 
 
-    ///// Validations \\\\\
 
     public AccountSuccessMessagePage assertAccountCreatedMessageIsDisplayed() {
         Assert.isTrue(driver.findElement(getAccountCreated).isDisplayed(), "ACCOUNT CREATED!not found");

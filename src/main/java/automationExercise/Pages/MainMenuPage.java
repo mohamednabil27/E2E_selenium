@@ -11,24 +11,17 @@ public class MainMenuPage {
     private WebDriver driver;
     private JsonFileManager testData;
 
-    ////   Locators  \\\\
+    // Locators
     private By deleteAccountButton = By.cssSelector("a[href='/delete_account']");
     private By loggedInAsUsername = By.cssSelector("a>b");
-    private By homeLink = By.cssSelector("a[href='/']"); // Added home navigation
 
     public MainMenuPage(WebDriver driver) {
         this.driver = driver;
         testData = new JsonFileManager("src/test/resources/TestDataJsonFiles/TestData.json");
     }
 
-    ////   New Navigation Method  \\\\
-    @Step("Navigate to Home Page")
-    public MainMenuPage navigateToHome() {
-        ElementActions.click(driver, homeLink);
-        return this;
-    }
 
-    ////   Existing Methods  \\\\
+
     @Step("Step 8 : Click on Delete Account Button")
     public MainMenuPage deleteAccount() {
         ElementActions.click(driver, deleteAccountButton);
@@ -40,8 +33,6 @@ public class MainMenuPage {
         Assert.assertEquals(driver.findElement(loggedInAsUsername).getText(),
                 testData.getjsonTestData("username"),
                 "Username not as expected!");
-        System.out.println("User name is displayed and it is " +
-                driver.findElement(loggedInAsUsername).getText());
         return this;
     }
 }

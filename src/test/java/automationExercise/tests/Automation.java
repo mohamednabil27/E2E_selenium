@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utilities.PageRefactory;
+import utilities.BrowserRefactory;
 import utilities.PropertiesReader;
 
 
@@ -86,7 +86,7 @@ public class Automation {
     @BeforeMethod
     public void setup() {
 
-        driver = PageRefactory.initiateDriver(System.getProperty("browserName"), true, Boolean.parseBoolean(System.getProperty("headless")));
+        driver = BrowserRefactory.initiateDriver(System.getProperty("browserName"), true, Boolean.parseBoolean(System.getProperty("headless")));
         testData = new JsonFileManager("src/test/resources/TestDataJsonFiles/TestData.json");
 
     }

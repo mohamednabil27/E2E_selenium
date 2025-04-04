@@ -23,6 +23,7 @@ public class ProductPage {
 
     public ProductPage selectFirstItem() {
         Actions actions = new Actions(driver);
+        //hover
         actions.moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(firstItem))).perform();
         wait.until(ExpectedConditions.elementToBeClickable(addToCart)).click();
         return this;

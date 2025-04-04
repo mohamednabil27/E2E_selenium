@@ -19,12 +19,8 @@ public class ElementActions {
         // Single combined wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(defaultWatingTime));
 
-        // Wait for both visibility AND clickability
-        wait.until(d -> {
-            driver.findElement(elementLocator).isDisplayed();
-            return driver.findElement(elementLocator);
-        }).click();
-
+        // Preferred solution (cleaner and safer)
+        wait.until(ExpectedConditions.elementToBeClickable(elementLocator)).click();
     }
 
     public static void assertTrueOnElement(WebDriver driver, By elementLocator, String text){

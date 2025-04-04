@@ -7,14 +7,15 @@ import utilities.ElementActions;
 
 public class HomePage {
 
-    ////   Locators  \\\\
+
 
     private WebDriver driver;
     public String url = "https://automationexercise.com/ ";
+
+    // Locators
     private By signupOrLoginButton = By.xpath("//a[@href='/login']");
 
 
-    ////   Actions  \\\\
 
     @Step("Step 1 : get the url {url}")
     public HomePage navigate() {
@@ -30,6 +31,11 @@ public class HomePage {
     }
 
 
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+
+    }
+
     @Step("Step 2: click on Signup button")
     public HomePage clickOnsignupOrLoginButton() {
         ElementActions.click(driver, signupOrLoginButton);
@@ -38,10 +44,7 @@ public class HomePage {
     }
 
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
 
-    }
 
 
 }

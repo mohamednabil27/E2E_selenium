@@ -1,16 +1,14 @@
 package utilities;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class PageRefactory {
+public class BrowserRefactory {
     private static WebDriver driver;
     private static final URL gridUrl;
 
@@ -23,17 +21,13 @@ public class PageRefactory {
     }
 
     public static WebDriver initiateDriver(String browserName, boolean maximize, boolean headless) {
-        String osInfo = "Operating System: " + System.getProperty("os.name") +
-                " (Version: " + System.getProperty("os.version") + ")";
 
         switch (browserName.toLowerCase()) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (headless) {
-                    System.out.println("Initializing Chrome in Headless mode");
                     chromeOptions.addArguments("--headless=new");
                 }
-                System.out.println("Initializing Chrome Browser on " + osInfo);
                 chromeOptions.addArguments(
                         "--disable-notifications",
                         "--disable-popup-blocking",
@@ -52,7 +46,6 @@ public class PageRefactory {
                     System.out.println("Initializing Firefox in Headless mode");
                     firefoxOptions.addArguments("--headless");
                 }
-                System.out.println("Initializing Firefox Browser on " + osInfo);
                 driver = new RemoteWebDriver(gridUrl, firefoxOptions);
                 break;
 
@@ -62,7 +55,6 @@ public class PageRefactory {
                     System.out.println("Initializing Edge in Headless mode");
                     edgeOptions.addArguments("--headless=new");
                 }
-                System.out.println("Initializing Edge Browser on " + osInfo);
                 driver = new RemoteWebDriver(gridUrl, edgeOptions);
                 break;
 

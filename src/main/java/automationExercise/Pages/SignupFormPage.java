@@ -12,7 +12,7 @@ public class SignupFormPage {
     WebDriver driver;
     private WebDriverWait wait;
 
-    ////   Locators  \\\\
+    // Locators
     private final By gender = By.id("id_gender1");
     private final By passDataToPasswordField = By.cssSelector("input.form-control[id=password]");
     private final By newsLetterCheckBox = By.id("newsletter");
@@ -34,7 +34,7 @@ public class SignupFormPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    ////   Enhanced Actions  \\\\
+
     @Step("Step 6: Fill Address Information")
     public SignupFormPage fillAddressInformation(String password, String firstname, String lastName, String company, String add1,
                                                  String add2, String contry, String Stat, String City, String zip, String fonNumber) {
@@ -75,6 +75,7 @@ public class SignupFormPage {
         }
     }
 
+    // this function for removing ads
     private void handleOverlays() {
         try {
             // Remove common ad containers
@@ -104,7 +105,7 @@ public class SignupFormPage {
                 .executeScript("return document.readyState").equals("complete"));
     }
 
-    ////   Improved Helper Methods  \\\\
+
     private void checkCheckbox(By checkboxLocator) {
         WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(checkboxLocator));
         if (!checkbox.isSelected()) {
@@ -153,31 +154,4 @@ public class SignupFormPage {
         new Select(element).selectByVisibleText(text);
     }
 
-    ////   LogoutPage Inner Class (Unchanged)  \\//
-    public static class LogoutPage {
-        WebDriver driver;
-        private WebDriverWait wait;
-
-        private By logoutButton = By.xpath("//a[@href='/logout']");
-        private By emailAddressFieldforLogin = By.xpath("//input[@data-qa='login-email']");
-        private By passwordField = By.xpath("//input[@data-qa='login-password']");
-        private By loginButton = By.xpath("//button[@data-qa='login-button']");
-
-        public LogoutPage(WebDriver driver) {
-            this.driver = driver;
-            this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        }
-
-        public LogoutPage clickOnLoggoutButton() {
-            wait.until(ExpectedConditions.elementToBeClickable(logoutButton)).click();
-            return this;
-        }
-
-        public LogoutPage loginWithEmailAndPassword(String email, String Password) {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressFieldforLogin)).sendKeys(email);
-            driver.findElement(passwordField).sendKeys(Password);
-            wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
-            return this;
-        }
-    }
 }
